@@ -1,0 +1,22 @@
+[toolchain]
+
+[features]
+resolution = false
+skip-lint = false
+
+[programs.devnet]
+open_clockwork_demo = "46RcJ7gAKGvSpSfWPgX1GaEWurcscz2atDxho74aRDrq"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+# [test.validator]
+# url = "https://devnet.helius-rpc.com/?api-key=85623fd6-e140-40d8-97cb-02da06e2f5e1"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+
